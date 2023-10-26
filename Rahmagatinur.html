@@ -1,0 +1,101 @@
+Kalkulator Upgrade. Upgrade Latihan 6 (yang hanya operasi tambah) dengan operasi kurang, kali, bagi, dan modulus. Tidak ada video tutorial, silahkan kalian berkreasi dengan coding! Happy Challenge!
+<hr />
+<input id="input1" />
+<label>*</label>
+<input id="input2" />
+<button onclick="kali()">Hitung</button>
+<label id="kali">Hasil</label>
+<input id="input3" />
+<label>%</label>
+<input id="input4" />
+<button onclick="modulus()">Hitung</button>
+<label id="modulus">Hasil</label>
+<input id="input5" />
+<label>-</label>
+<input id="input6" />
+<button onclick="kurang()">Hitung</button>
+<label id="kurang">Hasil</label>
+<input id="input7" />
+<label>/</label>
+<input id="input8" />
+<button onclick="bagi()">Hitung</button>
+<label id="bagi">Hasil</label>
+
+
+<script>
+   function kali() {
+    // alert("sedang melakukan proses hitung...")
+    let input1 = document.getElementById("input1").value;
+    let input2 = document.getElementById("input2").value;
+    let hasil;
+
+    input1 = parseInt(input1);
+    input2 = parseInt(input2);
+
+    if (!isNaN(input1) && !isNaN(input2)) {
+      hasil = input1 * input2;  
+    } else {
+    hasil = "nilai input invalid"
+    }
+    
+    document.getElementById("kali").innerHTML = hasil;
+
+    console.log(typeof input1,typeof input2, hasil);
+   }
+   function modulus() {
+    let input3 = document.getElementById("input3").value;
+    let input4 = document.getElementById("input4").value;
+    let hasil;
+
+    input3 = parseInt(input3);
+    input4 = parseInt(input4);
+
+    if (!isNaN(input3) && !isNaN(input4)) {
+      hasil = input3 % input4;  
+    } else {
+    hasil = "nilai input invalid"
+    }
+    
+    document.getElementById("modulus").innerHTML = hasil;
+
+     console.log(typeof input3,typeof input4, hasil);
+    }
+    function kurang() {
+    // alert("sedang melakukan proses hitung...")
+    let input5 = document.getElementById("input5").value;
+    let input6 = document.getElementById("input6").value;
+    let hasil;
+
+    input5 = parseInt(input5);
+    input6 = parseInt(input6);
+
+    if (!isNaN(input5) && !isNaN(input6)) {
+      hasil = input5 - input6;  
+    } else {
+    hasil = "nilai input invalid"
+    }
+    
+    document.getElementById("kurang").innerHTML = hasil;
+
+    console.log(typeof input5,typeof input6, hasil);
+  }
+    function bagi() {
+    // alert("sedang melakukan proses hitung...")
+    let input7 = document.getElementById("input7").value;
+    let input8 = document.getElementById("input8").value;
+    let hasil;
+
+    input5 = parseInt(input7);
+    input6 = parseInt(input8);
+
+    if (!isNaN(input7) && !isNaN(input8)) {
+      hasil = input7 / input8;  
+    } else {
+    hasil = "nilai input invalid"
+    }
+    
+    document.getElementById("bagi").innerHTML = hasil;
+
+    console.log(typeof input7,typeof input8, hasil);
+    }
+</script>
